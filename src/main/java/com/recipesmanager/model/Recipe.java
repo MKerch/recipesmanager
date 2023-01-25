@@ -12,7 +12,8 @@ public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
-    private boolean isVegetarian;
+
+    private boolean vegetarian;
     @Min(1)
     @Max(5)
     private int numberOfServings;
@@ -25,8 +26,8 @@ public class Recipe {
     @CollectionTable(name = "instruction")
     private Set<String> instructions = new HashSet<>();
 
-    public Recipe(boolean isVegetarian, int numberOfServings) {
-        this.isVegetarian = isVegetarian;
+    public Recipe(boolean vegetarian, int numberOfServings) {
+        this.vegetarian = vegetarian;
         this.numberOfServings = numberOfServings;
     }
 
@@ -40,7 +41,7 @@ public class Recipe {
     }
 
     public boolean isVegetarian() {
-        return isVegetarian;
+        return vegetarian;
     }
 
     public int getNumberOfServings() {
@@ -59,8 +60,8 @@ public class Recipe {
         this.id = id;
     }
 
-    public void setVegetarian(boolean isVegetarian) {
-        this.isVegetarian = isVegetarian;
+    public void setVegetarian(boolean vegetarian) {
+        this.vegetarian = vegetarian;
     }
 
     public void setNumberOfServings(int numberOfServings) {

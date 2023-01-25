@@ -102,7 +102,7 @@ public class TestUtils {
     public List<SearchCriteria> getAllVegetarian() {
         List<SearchCriteria> list = new ArrayList<>();
         SearchCriteria criteria = new SearchCriteria();
-        criteria.setKey("isVegetarian");
+        criteria.setKey("vegetarian");
         criteria.setOperation("=");
         criteria.setValue(true);
         list.add(criteria);

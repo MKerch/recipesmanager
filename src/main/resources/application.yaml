@@ -1,7 +1,7 @@
 spring:
-#  sql:
-#    init:
-#      mode: never
+  sql:
+    init:
+      mode: never
   h2:
     console:
       enabled: true
